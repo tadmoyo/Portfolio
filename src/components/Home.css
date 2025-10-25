@@ -1,0 +1,252 @@
+.text-black {
+    color: #000000;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-pink {
+    color: #E56399;
+}
+
+.text-blue {
+    color: #7FD1B9;
+}
+
+.text-brown {
+    color: #D3A588;
+}
+
+.speech-bubble-animated {
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+  background: var(--bubble-bg);
+  outline: 0.8px solid #000;
+  color: var(--speech-col);
+  max-width: 90vw; 
+  margin: 0 auto;
+}
+
+.btn{
+  color: var(--speech-col) !important;
+}
+
+.speech-dots {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+  background: var(--dot-color);
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  background: #E56399;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.custom-location-btn:hover .circle {
+  transform: scale(1.5);
+  background: white;
+}
+
+.custom-location-btn {
+  border: 1px solid #333333 !important;
+  background: transparent;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; 
+  min-width: fit-content; 
+}
+
+.custom-location-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #E56399;
+  transition: all 0.6s cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: -1;
+}
+
+.custom-location-btn:hover::before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.custom-location-btn:hover {
+  border-color: #E56399 !important;
+  color: white !important;
+}
+
+.custom-location-btn-1 .circle {
+  background: #7FD1B9;
+}
+
+.custom-location-btn-1:hover .circle {
+  transform: scale(1.5);
+  background: white;
+}
+
+.custom-location-btn-1 {
+  border: 1px solid #333333 !important;
+  background: transparent;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.custom-location-btn-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #7FD1B9;
+  transition: all 0.6s cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: -1;
+}
+
+.custom-location-btn-1:hover::before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.custom-location-btn-1:hover {
+  border-color: #7FD1B9 !important;
+  color: white !important;
+}
+
+.new-btn:hover {
+  color: white !important;
+  background-color: #212529 !important;
+}
+
+@media (max-width: 767px) {
+  .speech-bubble-animated {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem;
+  }
+  
+  .hello-icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .custom-location-btn,
+  .custom-location-btn-1 {
+    font-size: 0.5rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  
+  .circle {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .home-grid h1 {
+    font-size: calc(1.5rem + 1vw) !important; 
+  }
+  
+  .home-grid h6 {
+    font-size: 0.8rem !important;
+  }
+  
+  .belief-statement {
+    gap: 0.2rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .home-grid h1 {
+    font-size: calc(2rem + 1vw) !important;
+  }
+  
+  .custom-location-btn,
+  .custom-location-btn-1 {
+    font-size: 0.55rem !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .home-grid .container {
+    max-width: 1400px; 
+  }
+  
+  .home-grid h1 {
+    font-size: 3.5rem !important;
+  }
+  
+  .belief-statement h6 {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .belief-statement {
+    padding: 0 1rem;
+  }
+  
+  .belief-statement h6 {
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  .hello-statement {
+    gap: 1rem;
+  }
+}
+
+.home-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; 
+
+}

@@ -1,0 +1,109 @@
+:root, [data-theme="default"] {
+  --bg-primary: #000000;
+  --text-primary: #ffffff;
+  --accent-pink: #E56399;
+  --accent-blue: #7FD1B9;
+  --accent-brown: #D3A588;
+  --bubble-bg: #222;
+  --dot-color: #fff;
+  --portfolio-bg: #ffffff;
+  --portfolio-text: #000000; 
+}
+
+[data-theme="light"] {
+  --bg-primary: #ffffff !important;
+  --text-primary: #000000 !important;
+  --speech-col: #000 !important;
+  --accent-pink: #E56399 !important;
+  --accent-blue: #7FD1B9 !important;
+  --accent-brown: #D3A588 !important;
+  --bubble-bg: #fff !important;
+  --dot-color: #000 !important;
+  --portfolio-bg: #ffffff;
+  --portfolio-text: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #000000 !important;
+  --text-primary: #ffffff !important;
+  --speech-col: #fff !important;
+  --accent-pink: #E56399 !important;
+  --accent-blue: #7FD1B9 !important;
+  --accent-brown: #D3A588 !important;
+  --bubble-bg: #222 !important;
+  --dot-color: #fff !important;
+  --portfolio-bg: #000000;
+  --portfolio-text: #ffffff;
+}
+
+.monotone-mode {
+  filter: grayscale(100%);
+}
+
+.monotone-mode img,
+.monotone-mode video,
+.monotone-mode canvas {
+  filter: grayscale(100%);
+}
+
+.keyboard-nav-mode *:focus {
+  outline: 3px solid #E56399 !important;
+  outline-offset: 2px !important;
+}
+
+.keyboard-nav-mode button:focus,
+.keyboard-nav-mode [role="button"]:focus,
+.keyboard-nav-mode a:focus {
+  box-shadow: 0 0 0 3px rgba(229, 99, 153, 0.5) !important;
+}
+
+body, .home, .app-container {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio {
+  background: var(--portfolio-bg) !important;
+  color: var(--portfolio-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-pink {
+  color: var(--accent-pink) !important;
+}
+
+.text-blue {
+  color: var(--accent-blue) !important;
+}
+
+.text-brown {
+  color: var(--accent-brown) !important;
+}
+
+.monotone-mode .keyboard-nav-mode *:focus {
+  outline-color: #666 !important;
+}
+
+@media (max-width: 767px) {
+  .keyboard-nav-mode *:focus {
+    outline: 2px solid #E56399 !important; 
+    outline-offset: 1px !important;
+  }
+  
+  .keyboard-nav-mode button:focus,
+  .keyboard-nav-mode [role="button"]:focus,
+  .keyboard-nav-mode a:focus {
+    box-shadow: 0 0 0 2px rgba(229, 99, 153, 0.5) !important;
+  }
+}
+
+[data-theme="light"] .home {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .portfolio {
+  background-color: var(--portfolio-bg) !important;
+  color: var(--portfolio-text) !important;
+}

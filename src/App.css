@@ -1,0 +1,76 @@
+.app-container {
+  position: relative;
+  height: 200vh; 
+  min-height: 600px; 
+}
+
+.home-wrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+  min-height: 500px; 
+}
+
+.portfolio-wrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+  min-height: 500px; 
+}
+
+.scroll-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #E56399, #7FD1B9, #D3A588);
+  transition: width 0.1s ease;
+  border-radius: 0 2px 2px 0;
+}
+
+.home-wrapper,
+.portfolio-wrapper {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-width: 320px; 
+}
+
+@media (max-width: 767px) {
+  .app-container {
+    height: 180vh; 
+  }
+  
+  .home-wrapper,
+  .portfolio-wrapper {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .app-container {
+    height: 190vh;
+  }
+}
+
+@media (min-width: 1920px) {
+  .app-container {
+    height: 180vh;
+  }
+  
+  .home-wrapper,
+  .portfolio-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
